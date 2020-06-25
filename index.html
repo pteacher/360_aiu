@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AIU 360 Tour</title>
+	<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+	<style>
+	#panorama {
+		margin: 0 auto;
+	    width: 800px;
+	    height: 600px;
+	}
+	</style>
+</head>
+<body>
+	<div id="panorama"></div>
+	<script>
+	pannellum.viewer('panorama', {   
+	    "default": {
+	        "firstScene": "intro",
+	        "sceneFadeDuration": 1000,
+	        "autoLoad": true,
+	        "basePath": "assets/"
+	    },
+
+	    "scenes": {
+	        "intro": {
+	            "title": "Entrance",
+	            "type": "equirectangular",
+	            "panorama": "intro.jpg",
+	            "hotSpots": [
+	                {
+	                    "pitch": 0,
+	                    "yaw": 0,
+	                    "type": "scene",
+	                    "text": "Block B",
+	                    "sceneId": "intro2"
+	                }
+	            ]
+	        },
+
+	        "intro2": {
+	            "title": "Intro2",	          
+	            "type": "equirectangular",
+	            "panorama": "intro2.jpg",
+	            "hotSpots": [
+	                {
+	                    "pitch": -5,
+	                    "yaw": 185,
+	                    "type": "scene",
+	                    "text": "Entrance - Block A",
+	                    "sceneId": "intro"
+	                    
+	                }, 
+	                {
+	                    "pitch": 0,
+	                    "yaw": 5,
+	                    "type": "scene",
+	                    "text": "Block C",
+	                    "sceneId": "intro3"
+	                    
+	                }
+	            ]
+	        },
+
+	        "intro3": {
+	            "title": "Intro3",	          
+	            "type": "equirectangular",
+	            "panorama": "intro3.jpg",
+	            "yaw": -120,
+	            "hotSpots": [
+	                {
+	                    "pitch": -5,
+	                    "yaw": 30,
+	                    "type": "scene",
+	                    "text": "Block B",
+	                    "sceneId": "intro2",
+	                }
+	            ]
+	        }
+	    }
+	});
+	</script>
+</body>
+</html>
