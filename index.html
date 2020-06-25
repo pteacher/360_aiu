@@ -22,6 +22,7 @@
 	        "firstScene": "intro",
 	        "sceneFadeDuration": 1000,
 	        "autoLoad": true,
+	        "orientationOnByDefault": true,
 	        "basePath": "assets/"
 	    },
 
@@ -32,7 +33,7 @@
 	            "panorama": "intro.jpg",
 	            "hotSpots": [
 	                {
-	                    "pitch": 0,
+	                    "pitch": -5,
 	                    "yaw": 0,
 	                    "type": "scene",
 	                    "text": "Block B",
@@ -55,7 +56,7 @@
 	                    
 	                }, 
 	                {
-	                    "pitch": 0,
+	                    "pitch": -5,
 	                    "yaw": 5,
 	                    "type": "scene",
 	                    "text": "Block C",
@@ -84,6 +85,25 @@
 	                    "type": "scene",
 	                    "text": "Park",
 	                    "sceneId": "gazebo",
+	                }, 
+	                {
+	                    "pitch": -5,
+	                    "yaw": -165,
+	                    "type": "scene",
+	                    "text": "Kantin",
+	                    "sceneId": "kantin",
+	                },
+	                {
+	                    "pitch": 5,
+	                    "yaw": -5,
+	                    "type": "info",
+	                    "text": "Dinning Hall",
+	                },
+	                {
+	                    "pitch": 10,
+	                    "yaw": -95,
+	                    "type": "info",
+	                    "text": "Block C",
 	                }
 	            ]
 	        },
@@ -92,7 +112,7 @@
 	            "title": "Park",	          
 	            "type": "equirectangular",
 	            "panorama": "gazebo.jpg",
-	            "yaw": -120,
+	            "yaw": 20,
 	            "hotSpots": [
 	                {
 	                    "pitch": -5,
@@ -102,7 +122,168 @@
 	                    "sceneId": "intro3",
 	                }
 	            ]
+	        },
+
+	        "kantin": {
+	            "title": "Kantin",	          
+	            "type": "equirectangular",
+	            "panorama": "c_intro_2.jpg",
+	            "yaw": 30,
+	            "hotSpots": [
+	                {
+	                    "pitch": -5,
+	                    "yaw": -20,
+	                    "type": "scene",
+	                    "text": "Suleyman tepesi",
+	                    "sceneId": "suleyman",
+	                },
+	                {
+	                    "pitch": -5,
+	                    "yaw": 75,
+	                    "type": "scene",
+	                    "text": "Basketball field",
+	                    "sceneId": "basket",
+	                },
+	                {
+	                    "pitch": -2,
+	                    "yaw": -120,
+	                    "type": "scene",
+	                    "text": "Block C",
+	                    "sceneId": "intro3",
+	                },
+	                {
+	                    "pitch": 5,
+	                    "yaw": -80,
+	                    "type": "info",
+	                    "text": "Sport Hall",
+	                },
+	                {
+	                    "pitch": 5,
+	                    "yaw": 110,
+	                    "type": "info",
+	                    "text": "Cafeteria",
+	                }
+	            ]
+	        },
+
+	        "basket": {
+	            "title": "Basketball field",	          
+	            "type": "equirectangular",
+	            "panorama": "basket.jpg",
+	            "yaw": -120,
+	            "hotSpots": [
+	                {
+	                    "pitch": -5,
+	                    "yaw": 20,
+	                    "type": "scene",
+	                    "text": "Kantin",
+	                    "sceneId": "kantin",
+	                }
+
+	            ]
+	        },
+
+	        "suleyman": {
+	            "title": "Suleyman tepesi",	          
+	            "type": "equirectangular",
+	            "panorama": "c_intro1.jpg",
+	            "yaw": -120,
+	            "hotSpots": [
+	                {
+	                    "pitch": -25,
+	                    "yaw": 90,
+	                    "type": "scene",
+	                    "text": "Kantin",
+	                    "sceneId": "kantin",
+	                },
+	                {
+	                    "pitch": -5,
+	                    "yaw": -60,
+	                    "type": "scene",
+	                    "text": "Block D",
+	                    "sceneId": "blockd",
+	                },
+	                {
+	                    "pitch": 5,
+	                    "yaw": -93,
+	                    "type": "info",
+	                    "text": "Picniс zone",
+	                },
+	                {
+	                    "pitch": 5,
+	                    "yaw": 50,
+	                    "type": "info",
+	                    "text": "Football field",
+	                }
+	            ]
+	        },
+
+	        "blockd": {
+	            "title": "Block D",	          
+	            "type": "equirectangular",
+	            "panorama": "D_block.jpg",
+	            "yaw": 0,
+	            "hotSpots": [
+	                {
+	                    "pitch": -5,
+	                    "yaw": -110,
+	                    "type": "scene",
+	                    "text": "Suleyman tepesi",
+	                    "sceneId": "suleyman",
+	                },
+	                {
+	                    "pitch": -10,
+	                    "yaw": 10,
+	                    "type": "scene",
+	                    "text": "Block D entrance",
+	                    "sceneId": "blockdentrance",
+	                }
+
+	            ]
+	        },
+
+	        "blockdentrance": {
+	            "title": "Block D",	          
+	            "type": "equirectangular",
+	            "panorama": "D_hall.jpg",
+	            "yaw": 0,
+	            "hotSpots": [
+	                {
+	                    "pitch": -15,
+	                    "yaw": 0,
+	                    "type": "scene",
+	                    "text": "Block D Hall",
+	                    "sceneId": "blockdhall",
+	                },
+	                {
+	                    "pitch": -10,
+	                    "yaw": 183,
+	                    "type": "scene",
+	                    "text": "Block D",
+	                    "sceneId": "blockd",
+	                }
+
+	            ]
+	        },
+
+	        "blockdhall": {
+	            "title": "Block D Hall",	          
+	            "type": "equirectangular",
+	            "panorama": "D_hall2.jpg",
+	            "yaw": -30,
+	            "pitch": -30,
+	            "hotSpots": [
+	                {
+	                    "pitch": -10,
+	                    "yaw": 180,
+	                    "type": "scene",
+	                    "text": "Block D Entrance",
+	                    "sceneId": "blockdentrance",
+	                },
+	            ]
 	        }
+
+
 	    }
 	});
 	</script>
